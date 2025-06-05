@@ -1,4 +1,4 @@
-package ru.la.service;
+package ru.la.reader;
 
 import java.io.IOException;
 import java.nio.file.DirectoryStream;
@@ -7,8 +7,13 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LogFileReader {
-    public List<String> readAllLines(Path directory) throws IOException {
+public class LogFileReader implements LogReader {
+    private final Path directory;
+    public LogFileReader(Path directory) {
+        this.directory = directory;
+    }
+
+    public List<String> readAllLines() {
         List<String> lines = new ArrayList<>();
 
         try (DirectoryStream<Path> stream = Files.newDirectoryStream(directory, "*.log")) {
@@ -16,6 +21,9 @@ public class LogFileReader {
                 List<String> logLines = Files.readAllLines(path);
                 lines.addAll(logLines);
             }
+        } catch (IOException e) {
+            System.err.println("Ошибка чтения файла: " + e.getMessage());
+            System.exit(1);
         }
 
         return lines;
