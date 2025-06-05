@@ -11,14 +11,14 @@ import java.time.format.DateTimeFormatter;
 @Builder
 public class LogEntry {
     @NonNull
-    private final LocalDateTime dateTime;
+    private LocalDateTime dateTime;
     @NonNull
-    private final String user;
+    private String user;
     @NonNull
-    private final OperationType operationType;
+    private OperationType operationType;
     @NonNull
-    private final double amount;
-    private final String toUser;
+    private double amount;
+    private String toUser;
 
     @Override
     public String toString() {
