@@ -124,15 +124,6 @@ public class UserBalanceCalculatorTest {
 
         List<LogEntry> logEntries = new ArrayList<>(4);
 
-
-        logEntries.add(LogEntry.builder()
-                .dateTime(LocalDateTime.of(2025,5,15,9,0,22))
-                .user("user001")
-                .operationType(OperationType.BALANCE_INQUIRY)
-                .amount(735)
-                .build());
-
-
         logEntries.add(LogEntry.builder()
                 .dateTime(LocalDateTime.of(2025,5,10,10,3,23))
                 .user("user001")
@@ -160,7 +151,12 @@ public class UserBalanceCalculatorTest {
                 .operationType(OperationType.WITHDREW)
                 .amount(50)
                 .build());
-
+        logEntries.add(LogEntry.builder()
+                .dateTime(LocalDateTime.of(2025,5,15,9,0,22))
+                .user("user001")
+                .operationType(OperationType.BALANCE_INQUIRY)
+                .amount(735)
+                .build());
 
         double expectedBalance = 735;
 
