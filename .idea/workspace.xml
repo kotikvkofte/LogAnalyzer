@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac054973-b609-4482-882d-57d4d8213123" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/la/Main.java" afterDir="false" />
+    <list default="true" id="ac054973-b609-4482-882d-57d4d8213123" name="Changes" comment="fix RECIVED operations logic">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/la/reader/LogReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/la/service/balance/BalanceCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/la/service/balance/UserBalanceCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/la/writer/LogFileWriter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/la/writer/LogWriter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/UserBalanceCalculatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/la/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/la/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/la/service/LogFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/la/reader/LogFileReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +23,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -38,6 +43,19 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "JUnit.All in LogAnalyzer.executor": "Run",
+    "JUnit.BalanceInquiryParserTest.testParse.executor": "Run",
+    "JUnit.BalanceInquiryParserTest.testParseBadString.executor": "Run",
+    "JUnit.BalanceInquiryParserTest.testParseGoodString.executor": "Run",
+    "JUnit.LogParserTest.executor": "Run",
+    "JUnit.LogParserTest.shouldParseTransfer.executor": "Run",
+    "JUnit.ProcessorTest.validMapTest.executor": "Run",
+    "JUnit.TransferParserTest.testParseBadString.executor": "Run",
+    "JUnit.TransferParserTest.testParseGoodString.executor": "Run",
+    "JUnit.UserBalanceCalculatorTest.inquiryLastTest.executor": "Debug",
+    "JUnit.UserBalanceCalculatorTest.inquiryMiddleTest.executor": "Run",
+    "JUnit.UserBalanceCalculatorTest.testUserBalanceCalculator.executor": "Run",
+    "JUnit.WithdrawParserTest.testParseGoodString.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
@@ -51,6 +69,78 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.la.Main" />
+      <module name="LogAnalyzer" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;C:\Users\ex9\OneDrive\Рабочий стол\test&quot;" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.la.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProcessorTest.validMapTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LogAnalyzer" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ProcessorTest" />
+      <option name="METHOD_NAME" value="validMapTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserBalanceCalculatorTest.inquiryLastTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LogAnalyzer" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserBalanceCalculatorTest" />
+      <option name="METHOD_NAME" value="inquiryLastTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserBalanceCalculatorTest.inquiryMiddleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LogAnalyzer" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserBalanceCalculatorTest" />
+      <option name="METHOD_NAME" value="inquiryMiddleTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserBalanceCalculatorTest.testUserBalanceCalculator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LogAnalyzer" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserBalanceCalculatorTest" />
+      <option name="METHOD_NAME" value="testUserBalanceCalculator" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.ProcessorTest.validMapTest" />
+      <item itemvalue="JUnit.UserBalanceCalculatorTest.inquiryLastTest" />
+      <item itemvalue="JUnit.UserBalanceCalculatorTest.inquiryMiddleTest" />
+      <item itemvalue="JUnit.UserBalanceCalculatorTest.testUserBalanceCalculator" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.UserBalanceCalculatorTest.inquiryLastTest" />
+        <item itemvalue="JUnit.UserBalanceCalculatorTest.inquiryMiddleTest" />
+        <item itemvalue="JUnit.UserBalanceCalculatorTest.testUserBalanceCalculator" />
+        <item itemvalue="JUnit.ProcessorTest.validMapTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -67,11 +157,141 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1749099078611</updated>
-      <workItem from="1749099080714" duration="1706000" />
+      <workItem from="1749099080714" duration="28870000" />
     </task>
+    <task id="LOCAL-00001" summary="init project">
+      <option name="closed" value="true" />
+      <created>1749101120050</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1749101120050</updated>
+    </task>
+    <task id="LOCAL-00002" summary="create model classes">
+      <option name="closed" value="true" />
+      <created>1749101836903</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1749101836903</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fix dateRime output of LogEntry">
+      <option name="closed" value="true" />
+      <created>1749111872689</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1749111872689</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add parsers logic">
+      <option name="closed" value="true" />
+      <created>1749111898861</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1749111898861</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add central parser">
+      <option name="closed" value="true" />
+      <created>1749117634661</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1749117634661</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add tests fo parser, fix bugs">
+      <option name="closed" value="true" />
+      <created>1749121727431</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1749121727431</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add dependencies">
+      <option name="closed" value="true" />
+      <created>1749121738140</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1749121738140</updated>
+    </task>
+    <task id="LOCAL-00008" summary="create FileReader">
+      <option name="closed" value="true" />
+      <created>1749125776256</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1749125776256</updated>
+    </task>
+    <task id="LOCAL-00009" summary="create Processor for generate user-logs Map">
+      <option name="closed" value="true" />
+      <created>1749125877273</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1749125877273</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add RECIVED OperationType">
+      <option name="closed" value="true" />
+      <created>1749130607446</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1749130607446</updated>
+    </task>
+    <task id="LOCAL-00011" summary="create WithdrawParserTest">
+      <option name="closed" value="true" />
+      <created>1749130659028</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1749130659028</updated>
+    </task>
+    <task id="LOCAL-00012" summary="create ProcessorTest">
+      <option name="closed" value="true" />
+      <created>1749130667691</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1749130667691</updated>
+    </task>
+    <task id="LOCAL-00013" summary="update ProcessorTest">
+      <option name="closed" value="true" />
+      <created>1749131253327</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1749131253327</updated>
+    </task>
+    <task id="LOCAL-00014" summary="fix RECIVED operations logic">
+      <option name="closed" value="true" />
+      <created>1749131275997</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1749131275997</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init project" />
+    <MESSAGE value="create model classes" />
+    <MESSAGE value="fix dateRime output of LogEntry" />
+    <MESSAGE value="Add parsers logic" />
+    <MESSAGE value="Add central parser" />
+    <MESSAGE value="Add tests fo parser, fix bugs" />
+    <MESSAGE value="add dependencies" />
+    <MESSAGE value="create FileReader" />
+    <MESSAGE value="create Processor for generate user-logs Map" />
+    <MESSAGE value="add RECIVED OperationType" />
+    <MESSAGE value="create WithdrawParserTest" />
+    <MESSAGE value="create ProcessorTest" />
+    <MESSAGE value="update ProcessorTest" />
+    <MESSAGE value="fix RECIVED operations logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix RECIVED operations logic" />
   </component>
 </project>
