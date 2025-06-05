@@ -23,7 +23,7 @@ public class TransferParser implements StringOperationParser {
                     .user(matcher.group(2))
                     .operationType(OperationType.TRANSFERRED)
                     .amount(Double.parseDouble(matcher.group(3)))
-                    .toUser(matcher.group(4))
+                    .toUser(matcher.group(5))
                     .build();
         }
         return null;
