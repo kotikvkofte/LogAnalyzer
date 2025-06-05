@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NonNull;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 @Data
 @Builder
@@ -21,7 +22,8 @@ public class LogEntry {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder("[").append(dateTime).append("] ")
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        StringBuilder sb = new StringBuilder("[").append(dateTime.format(formatter)).append("] ")
                 .append(user).append(" ")
                 .append(operationType.getValue())
                 .append(" ").append(amount);
