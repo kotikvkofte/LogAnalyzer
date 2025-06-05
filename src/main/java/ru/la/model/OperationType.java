@@ -3,7 +3,8 @@ package ru.la.model;
 public enum OperationType {
     BALANCE_INQUIRY("balance inquiry"), //запрос текущего баланса средств пользователя
     TRANSFERRED("transferred"), //перевод средств другому пользователю
-    WITHDREW("withdrew"); //снятие средств
+    WITHDREW("withdrew"), //снятие средств
+    RECIVED ("recived"); //получение средств
 
     private final String value;
 

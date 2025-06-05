@@ -28,10 +28,14 @@ public class LogEntry {
                 .append(operationType.getValue())
                 .append(" ").append(amount);
 
-        if (toUser != null) {
-            if (operationType == OperationType.TRANSFERRED) {
+        switch (operationType)
+        {
+            case TRANSFERRED:
                 sb.append(" to ").append(toUser);
-            }
+                break;
+            case RECIVED:
+                sb.append(" from ").append(toUser);
+                break;
         }
 
         return sb.toString();
