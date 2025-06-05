@@ -51,7 +51,7 @@ public class ProcessorTest {
                 .dateTime(LocalDateTime.of(2025,5,10,10,3,23))
                 .user("user001")
                 .operationType(OperationType.RECIVED)
-                .amount(50.00)
+                .amount(990.00)
                 .toUser("user002")
                 .build());
 
